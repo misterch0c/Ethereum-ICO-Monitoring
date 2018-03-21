@@ -1,0 +1,23 @@
+{
+  "name": "ethereum-ico-monitoring",
+  "version": "1.0.0",
+  "description": "Watches Ethereum ICO addresses and tweet whenever ether are sent to an exchange address",
+  "main": "app.js",
+  "dependencies": {
+    "etherscan-api": "^8.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/misterch0c/Ethereum-ICO-Monitoring.git"
+  },
+  "author": "MisterCh0c",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/misterch0c/Ethereum-ICO-Monitoring/issues"
+  },
+  "homepage": "https://github.com/misterch0c/Ethereum-ICO-Monitoring#readme"
+}
