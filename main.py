@@ -5,18 +5,23 @@ from bson.objectid import ObjectId
 
 from pyetherscan import Client
 etherScanClient = Client()
-pyeth=pyetherscan.ethereum
-address="0xE28e72FCf78647ADCe1F1252F240bbfaebD63BcC"
-address_balance = etherScanClient.get_single_balance(address)
-print(address_balance.balance/1000000000000000000000)
+#pyeth=pyetherscan.ethereum
 
 client = MongoClient()
 client = MongoClient('localhost', 27017)
 db = client.db
-icos = db.eth
+
 div=1000000000000000000
+icos = db.icos
 
-#for ico  in icos.find():
-#	pprint.pprint(ico)
-#pprint.pprint(icos.find_one({"name":"DigiDAO"}))
 
+#Updates balance of all addresses
+def updateBalanceAll():
+	for ico in icos.find():
+		thisBalance=etherScanClient.get_single_balance(ico["address"]).balance/div
+		thisName=ico["name"]
+		print(thisName)
+		print(thisBalance)
+		icos.update({"name":thisName},{"$set":{"balance":thisBalance}})		
+
+updateBalanceAll()
