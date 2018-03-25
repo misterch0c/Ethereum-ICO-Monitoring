@@ -4,11 +4,13 @@ import sched, time
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 from pyetherscan import Client
+from twython import Twython
+
 etherScanClient = Client()
 #pyeth=pyetherscan.ethereum
 
 #######################################
-
+twitter = Twython(APP_KEY, APP_SECRET,OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 client = MongoClient()
 client = MongoClient('localhost', 27017)
 db = client.db
@@ -34,8 +36,11 @@ def checkBalances(sc):
 		if(ico["balance"]!=currentBalance):
 			#balance has changed
 			#post a tweet
-			#update balance
-			
+			twitter.update_status(status=ico["name"]+"ether balance has changed from "+ico["balance"]+ " to "+currentBalance+ " https://etherscan.io/address/" + ico["address"] )
+			#update new balance
+			icos.update({"name":ico["name"]},{"$set":{"balance":currentBalance}})
+
+	#2 seconds for testing
     s.enter(2, 1, do_something, (sc,))
 
 s.enter(2, 1, do_something, (s,))
