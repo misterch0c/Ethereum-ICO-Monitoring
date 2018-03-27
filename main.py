@@ -36,7 +36,7 @@ def checkBalances(sc):
 		if(ico["balance"]!=currentBalance):
 			#balance has changed
 			#post a tweet
-			twitter.update_status(status=ico["name"]+"ether balance has changed from "+ico["balance"]+ " to "+currentBalance+ " https://etherscan.io/address/" + ico["address"] )
+			twitter.update_status(status=ico["name"]+" ether balance has changed from "+ico["balance"]+ "$eth to "+currentBalance+ "$eth => https://etherscan.io/address/" + ico["address"] )
 			#update new balance
 			icos.update({"name":ico["name"]},{"$set":{"balance":currentBalance}})
 
