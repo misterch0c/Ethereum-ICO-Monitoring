@@ -12,6 +12,20 @@
 {"name":"Iconomi","address": "0x376c3e5547c68bc26240d8dcc6729fff665a4448", "balance":"0"}
 {"name":"Filecoin","address": "0xDB8C6862Ea4f5Cc843c4b3ed75Eb8951714b7635", "balance":"0"}
 {"name":"Kyber","address": "0x3eb01b3391ea15ce752d01cf3d3f09dec596f650", "balance":"0"}
-{"name": "testing", "address":"0x2a0c0dbecc7e4d658f48e01e3fa353f44050c208", "balance":"0"}
+{"name":"Request","address": "0xdd76b55ee6dafe0c7c978bff69206d476a5b9ce7", "balance":"0"}
+{"name":"Firstblood","address": "0xa5384627F6DcD3440298E2D8b0Da9d5F0FCBCeF7", "balance":"0"}
+{"name":"Monetha","address": "0x00832A758A781055Ac19B5F9bF553Db8BB9db32D", "balance":"0"}
+{"name":"Airswap","address": "0xebbd58cd1c31c08ef7a17337c264ba502762e993", "balance":"0"}
+{"name":"BAT","address": "0x44fcfaBfBe32024a01b778c025D70498382CCEd0", "balance":"0"}
+{"name":"DecentBet","address": "0xc87b1bf162c1719e3ffdf34995d1853192d6633b", "balance":"0"}
+{"name":"0x","address": "0x606Af0bd4501855914B50E2672C5926B896737EF", "balance":"0"}
+{"name":"Bloom","address": "0x9d217bcbd0bfae4d7f8f12c7702108d162e3ab79", "balance":"0"}
+{"name":"Distric0x","address": "0xd20e4d854c71de2428e1268167753e4c7070ae68", "balance":"0"}
+{"name":"Bancor","address": "0x67e4BBE50Fbc74633dFd9F7683465c02Af896541", "balance":"0"}
+{"name":"Tierion","address": "0xAD54EdbE26782A7c190eaBc0b35869b0e66FFccE", "balance":"0"}
+{"name":"Mysterium","address": "0x7e6614722614e434c4df9901bab31e466ba12fa4", "balance":"0"}
+{"name":"Hero","address": "0x1706024467ef8C9C4648Da6FC35f2C995Ac79CF6", "balance":"0"}
+{"name":"TenX","address": "0x185f19b43d818e10a31be68f445ef8edcb8afb83", "balance":"0"}
+{"name":"Santiment","address": "0x6dD5A9F47cfbC44C04a0a4452F0bA792ebfBcC9a", "balance":"0"}
 
 
