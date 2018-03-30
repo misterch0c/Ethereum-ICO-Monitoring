@@ -38,13 +38,12 @@ def checkBalances():
 	for ico in icos.find():
 		currentBalance=etherScanClient.get_single_balance(ico["address"]).balance/div
 		#we only tweet if balance is decreasing
-		if(ico["balance"]!=currentBalance):
-			print("Balance has changed, updating db")
-			icos.update({"name":ico["name"]},{"$set":{"balance":currentBalance}})
-		if((ico["balance"]-currentBalance)>=200):
+		if((ico["balance"]-currentBalance)>=400):
 			print("Balance of " + ico["name"] + " decreased")
 			twitter.update_status(status=ico["name"]+" ether balance has decreased from "+str(round(ico["balance"],2))+ " $eth to "+str(round(currentBalance,2))+ " $eth => https://etherscan.io/address/" + ico["address"] )
-			
+		if(ico["balance"]!=currentBalance):
+			print("Balance has changed, updating db")
+			icos.update({"name":ico["name"]},{"$set":{"balance":currentBalance}})		
 
 	#2 seconds for testing
 	s.enter(600, 1, checkBalances)
